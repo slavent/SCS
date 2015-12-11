@@ -1,0 +1,61 @@
+/* Nav styles */
+.nav {
+  height: 50px;
+  background: #000;
+}
+.nav__container {
+  float: left;
+  width: 90%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__item {
+  float: left;
+  height: 50px;
+  margin: 0 25px;
+  position: relative;
+}
+.nav__item:after {
+  content: "";
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T62T0Q3CMAxE7zaBCWAENgAmATZpNykbMEI7AWxyyFFSmVQg0zZ/TuLnXOwjqiVpA+AC4ABgn497AA8ALcmXT6EPJDU5ueb6uCF5KxsjQJJV2f3KdGcdybPFCRCsXLNNzpVZ8zNYub62NUBE9zd+a4B/tNeg3gCa+fyUtgpgiYRhlU+00Z3fxsWDVDogqQNwDHbkTvI0jrKDRIYqjfDETA5if2IXzM7FXEO2sznxw85vQIxO9k4vZqUAAAAASUVORK5CYII=");
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  width: 4px;
+  height: 4px;
+  color: #fff;
+  position: absolute;
+  top: 22px;
+  right: -25px;
+}
+.nav__item-first {
+  margin: 0 20px 0 0;
+}
+.nav__item-last {
+  margin: 0 0 0 20px;
+}
+.nav__item-last:after {
+  content: none;
+}
+.nav__link {
+  display: table-cell;
+  font-size: 12px;
+  line-height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.nav__link div {
+  width: 0;
+  opacity: 0;
+  height: 2px;
+  background: #fff;
+  margin: -2px 0 0;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.nav__link:hover div {
+  width: 100%;
+  opacity: 1;
+}

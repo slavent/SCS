@@ -1,0 +1,14 @@
+/* Header styles */
+header {
+  height: 100px;
+}
+
+header .wrp {
+  display: table;
+  height: 100%;
+}
+
+header .col {
+  display: table-cell;
+  height: 100%;
+}

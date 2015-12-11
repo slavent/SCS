@@ -1,0 +1,21 @@
+/* Search styles */
+.search {
+  float: right;
+  width: 10%;
+}
+.search:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJklEQVQ4T5WScVWCQRDEf9PABmACpQEmUBtIAo2ACdQE2kBsgAmkATYAE6xv8PbzuO8TnvvXvbvb2ZmdEVVFxA1wCVyV609gATxJ8rlX8k1EnADPpfELWAJumAJnwBaYSTLYXiWAHzz5XtK8YXUOvBSgC0kG70qFtqf3mvNXYWhGG0mnLYCnTyVZxp8VEXfAAzCRtMqPZhDAm6Rc3CBIRFjKR8s0AbxlTzjEwAw3QwCpbXIEwAxfgevaDTN4BG5bbS1YROx2BYwl2dZdGWAMeClrwDZ1j5ULDpid6knNHOQHNzsH7yVIDpF3Uy/YgXIufhhUU0zPD6OGvpPpe8vM6kA6gArIduVES1taVhW4PZAewBEnUuovyKGGobeGyfZfDBpXbP/iG8P2iPeaIsVhAAAAAElFTkSuQmCC");
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: table-cell;
+  height: 50px;
+}
+.search:before:hover {
+  cursor: pointer;
+  opacity: .9;
+}
