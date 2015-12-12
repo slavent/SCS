@@ -1,2 +1,4 @@
 # SCS
 SCS
+
+npm install

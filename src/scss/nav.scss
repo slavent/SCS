@@ -3,6 +3,15 @@
 .nav {
 	height: 50px;
 	background: #000;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 200;
+	}
 	
 	&__container {
 		float: left;
@@ -42,6 +51,20 @@
 			&:after {
 				content: none;
 			}
+		}
+
+		&-request-btn {
+			color: #212121;
+		    background: #D7EEEE;
+		    padding: 10px 20px;
+		    margin: 6px 0 0 80px;
+		    transition: all .3s;
+
+		    &:hover {
+				cursor: pointer;
+				color: #fff;
+    			background: #009688;
+		    }
 		}
 	}
 

@@ -1,0 +1,49 @@
+/* new-goods styles */
+
+.new-goods {
+	display: table;
+
+	&__item {
+		float: left;
+		width: 19.2%;
+		margin: 0 5px;
+		
+		&-margin-right-none {
+			margin-right: 0;
+		}
+
+		&-margin-left-none {
+			margin-left: 0;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		color: #212121;
+		font-size: 12px;
+		line-height: 1;
+		margin: 10px 0;
+		text-align: center;
+	}
+
+	&__price {
+		text-align: center;
+
+		&-new {
+			font-size: 14px;
+			font-weight: 400;
+			color: #009680;
+		}
+
+		&-old {
+			font-size: 12px;
+			font-weight: 400;
+			color: #999;
+			text-decoration: line-through;
+			padding: 0 0 0 5px;
+		}
+	}
+}

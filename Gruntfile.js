@@ -13,6 +13,17 @@ module.exports = function( grunt ) {
             }
         },
 
+        autoprefixer: {
+            options: {
+                browsers: [ "last 8 versions", "ie 8", "ie 9" ]
+            },
+            dist: {
+                files: {
+                    "dist/build.min.css": "dist/build.min.css"
+                }
+            }
+        },
+
         cssmin: {
             options: {
                 shorthandCompacting: false,
@@ -23,7 +34,7 @@ module.exports = function( grunt ) {
                     "dist/build.min.css": [
                         "node_modules/normalize.css/normalize.css",
                         "node_modules/magnific-popup/dist/magnific-popup.css",
-                        "node_modules/flexslider/flexslider.css",
+                        "node_modules/fotorama/fotorama.css",
                         "src/css/*.css"
                     ]
                 }
@@ -57,7 +68,7 @@ module.exports = function( grunt ) {
                     // libs
                     "node_modules/jquery/dist/jquery.min.js",
                     "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js",
-                    "node_modules/flexslider/jquery.flexslider-min.js",
+                    "node_modules/fotorama/fotorama.js",
 
                     // app
                     "src/js/app.js"
@@ -86,9 +97,10 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( "grunt-contrib-concat" );
     grunt.loadNpmTasks( "grunt-contrib-uglify" );
     grunt.loadNpmTasks( "grunt-contrib-cssmin" );
+    grunt.loadNpmTasks( "grunt-autoprefixer" );
     grunt.loadNpmTasks( "grunt-contrib-clean" );
 
     grunt.registerTask( "default", [ "watch" ] );
-    grunt.registerTask( "prod", [ "compass", "cssmin", "concat", "uglify", "clean" ] );
+    grunt.registerTask( "prod", [ "compass", "cssmin", "autoprefixer", "concat", "uglify", "clean" ] );
 
 };

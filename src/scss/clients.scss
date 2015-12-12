@@ -1,0 +1,24 @@
+/* clients styles */
+
+.clients {
+	display: table;
+	
+	&__item {
+		float: left;
+		width: 19.2%;
+		margin: 0 5px;
+		overflow: hidden;
+
+		&-margin-right-none {
+			margin-right: 0;
+		}
+		
+		&-margin-left-none {
+			margin-left: 0;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+}

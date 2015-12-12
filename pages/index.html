@@ -23,9 +23,16 @@
 		<header>
 			<div class="wrp">
 				<div class="col col-6">
+					<div class="slogan">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
 					<a href="" class="logo"></a>
 				</div>
-				<div class="col col-6"></div>
+				<div class="col col-6">
+					<div class="phones">
+						<div class="phones__title">Наши телефоны:</div>
+						<div>123-456-7890</div>
+						<div>333-426-7690</div>
+					</div>
+				</div>
 			</div>
 		</header>
 		<!-- end header -->
@@ -39,6 +46,7 @@
 					<li class="nav__item"><a href="" class="nav__link">Услуги<div></div></a></li>
 					<li class="nav__item"><a href="" class="nav__link">О компании<div></div></a></li>
 					<li class="nav__item nav__item-last"><a href="" class="nav__link">Контакты<div></div></a></li>
+					<li class="nav__item nav__item-last"><div class="nav__item-request-btn">Отправить запрос</div></li>
 				</ul>
 				<div class="search"></div>
 			</div>
@@ -46,55 +54,125 @@
 		<!-- end nav -->
 
 		<!-- start slider  -->
-		<div class="slider js-flexslider">
-			<ul class="slides">
-				<li><img src="http://lorempixel.com/1000/300/"></li>
-				<li><img src="http://lorempixel.com/1000/300/"></li>
-				<li><img src="http://lorempixel.com/1000/300/"></li>
-			</ul>
+		<div class="slider fotorama" data-width="100%" data-autoplay="true" data-transition="crossfade" data-loop="true" data-shuffle="true" data-arrows="true">
+			<img src="http://lorempixel.com/1300/700/">
+			<img src="http://lorempixel.com/1300/700/">
+			<img src="http://lorempixel.com/1300/700/">
 		</div>
 		<!-- end slider -->
 
 		<!-- start main -->
 		<main class="content">
 
-			<!-- start category -->
-			<div class="category">
-				<div class="category__item"></div>
-				<div class="category__item"></div>
-				<div class="category__item"></div>
-			</div>
-			<!-- end category -->
+			<div class="wrp">
+				<!-- start category -->
+				<h2>Категории</h2>
+				<div class="category">
+					<div class="category__item">
+						<div class="category__item-wrp">
+							<img src="http://lorempixel.com/400/220/" class="category__img"/>
+							<div class="category__title">The short shorts shop</div>
+						</div>
+					</div>
+					<div class="category__item category__item-has-margin">
+						<div class="category__item-wrp">
+							<img src="http://lorempixel.com/400/220/" class="category__img"/>
+							<div class="category__title">The short shorts shop</div>
+						</div>
+					</div>
+					<div class="category__item">
+						<div class="category__item-wrp">
+							<img src="http://lorempixel.com/400/220/" class="category__img"/>
+							<div class="category__title">The short shorts shop</div>
+						</div>
+					</div>
+				</div>
+				<!-- end category -->
 
-			<!-- start new goods -->
-			<div class="new-goods">
-				<div class="new-goods__item"></div>
-				<div class="new-goods__item"></div>
-				<div class="new-goods__item"></div>
-				<div class="new-goods__item"></div>
-				<div class="new-goods__item"></div>
-			</div>
-			<!-- end new goods -->
+				<!-- start new goods -->
+				<h2>Новинки</h2>
+				<div class="new-goods">
+					<div class="new-goods__item new-goods__item-margin-left-none">
+						<img src="http://lorempixel.com/360/480/" />
+						<div class="new-goods__title">Lorem ipsum dolor.</div>
+						<div class="rating"></div>
+						<div class="new-goods__price">
+							<span class="new-goods__price-new">$400.00</span>
+							<span class="new-goods__price-old">$450.00</span>
+						</div>
+					</div>
+					<div class="new-goods__item">
+						<img src="http://lorempixel.com/360/480/" />
+						<div class="new-goods__title">Lorem ipsum dolor.</div>
+						<div class="rating"></div>
+						<div class="new-goods__price">
+							<span class="new-goods__price-new">$400.00</span>
+							<span class="new-goods__price-old">$450.00</span>
+						</div>
+					</div>
+					<div class="new-goods__item">
+						<img src="http://lorempixel.com/360/480/" />
+						<div class="new-goods__title">Lorem ipsum dolor.</div>
+						<div class="rating"></div>
+						<div class="new-goods__price">
+							<span class="new-goods__price-new">$400.00</span>
+							<span class="new-goods__price-old">$450.00</span>
+						</div>
+					</div>
+					<div class="new-goods__item">
+						<img src="http://lorempixel.com/360/480/" />
+						<div class="new-goods__title">Lorem ipsum dolor.</div>
+						<div class="rating"></div>
+						<div class="new-goods__price">
+							<span class="new-goods__price-new">$400.00</span>
+							<span class="new-goods__price-old">$450.00</span>
+						</div>
+					</div>
+					<div class="new-goods__item new-goods__item-margin-right-none">
+						<img src="http://lorempixel.com/360/480/" />
+						<div class="new-goods__title">Lorem ipsum dolor.</div>
+						<div class="rating"></div>
+						<div class="new-goods__price">
+							<span class="new-goods__price-new">$400.00</span>
+							<span class="new-goods__price-old">$450.00</span>
+						</div>
+					</div>
+				</div>
+				<!-- end new goods -->
 
-			<!-- start banner -->
-			<div class="banner"></div>
-			<!-- end banner -->
+				<!-- start banner -->
+				<div class="banner">
+					<img src="http://lorempixel.com/1000/200/" />
+				</div>
+				<!-- end banner -->
 
-			<!-- start our clients -->
-			<div class="clients">
-				<div class="clients__item"></div>
-				<div class="clients__item"></div>
-				<div class="clients__item"></div>
-				<div class="clients__item"></div>
-				<div class="clients__item"></div>
-			</div>
-			<!-- end our clients -->
+				<!-- start our clients -->
+				<h2>Наши клиенты</h2>
+				<div class="clients">
+					<div class="clients__item clients__item-margin-left-none">
+						<a href=""><img src="http://lorempixel.com/200/200/"></a>
+					</div>
+					<div class="clients__item">
+						<a href=""><img src="http://lorempixel.com/200/200/"></a>
+					</div>
+					<div class="clients__item">
+						<a href=""><img src="http://lorempixel.com/200/200/"></a>
+					</div>
+					<div class="clients__item">
+						<a href=""><img src="http://lorempixel.com/200/200/"></a>
+					</div>
+					<div class="clients__item clients__item-margin-right-none">
+						<a href=""><img src="http://lorempixel.com/200/200/"></a>
+					</div>
+				</div>
+				<!-- end our clients -->
 
-			<!-- start instagramm -->
-			<div class="instagramm">
-				
+				<!-- start instagramm -->
+				<div class="instagramm">
+					
+				</div>
+				<!-- end instagramm -->
 			</div>
-			<!-- end instagramm -->
 	
 		</main>
 		<!-- end main -->
