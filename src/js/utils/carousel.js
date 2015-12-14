@@ -23,7 +23,8 @@ function Carousel( $root ) {
 		"position: absolute;" +
 		"top: 50%;" +
 		"left: 20px;" +
-		"z-index: 100",
+		"z-index: 100;" +
+		"cursor: pointer;",
 
 		nextBtnCSS = "width: 20px;" +
 		"height: 20px;" +
@@ -34,7 +35,8 @@ function Carousel( $root ) {
 		"position: absolute;" +
 		"top: 50%;" +
 		"right: 20px;" +
-		"z-index: 100",
+		"z-index: 100;" +
+		"cursor: pointer;",
 
 		$container = $( "<div style='width: 9999px;'/>" ),
 		$navPrevBtn = $( "<div class='carousel__nav-prev' style='" + prevBtnCSS + "'/>" ),
@@ -56,6 +58,16 @@ function Carousel( $root ) {
 	}
 
 	function movePrev() {
+		$container.prepend( $items.last().css( {
+			"marginLeft": -itemW
+		} ) );
+		$items = $container.children();
+		$items.eq( 0 ).animate( {
+			"marginLeft": 0
+		}, speed );
+	}
+
+	function moveNext() {
 		$items.eq( 0 ).animate( {
 			"marginLeft": -itemW
 		}, speed, function() {
@@ -64,16 +76,6 @@ function Carousel( $root ) {
 			} ) );
 			$items = $container.children();
 		} );
-	}
-
-	function moveNext() {
-		$container.prepend( $items.last().css( {
-			"marginLeft": -itemW
-		} ) );
-		$items = $container.children();
-		$items.eq( 0 ).animate( {
-			"marginLeft": 0
-		}, speed );
 	}
 
 	function bindEvents() {

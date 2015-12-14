@@ -35,6 +35,7 @@ module.exports = function( grunt ) {
                         "node_modules/normalize.css/normalize.css",
                         "node_modules/magnific-popup/dist/magnific-popup.css",
                         "node_modules/fotorama/fotorama.css",
+                        "node_modules/icheck/skins/minimal/aero.css",
                         "src/css/*.css"
                     ]
                 }
@@ -69,6 +70,7 @@ module.exports = function( grunt ) {
                     "node_modules/jquery/dist/jquery.min.js",
                     "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js",
                     "node_modules/fotorama/fotorama.js",
+                    "node_modules/icheck/icheck.min.js",
 
                     // app
                     "src/js/utils/carousel.js",
