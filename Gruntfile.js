@@ -51,8 +51,8 @@ module.exports = function( grunt ) {
                 }
             },
             scripts: {
-                files: "src/js/*.js",
-                tasks: [ "concat", "uglify" ],
+                files: [ "src/js/*.js", "src/js/utils/*.js" ],
+                tasks: [ "concat" ],
                 options: {
                     debounceDelay: 250
                 },
@@ -71,6 +71,7 @@ module.exports = function( grunt ) {
                     "node_modules/fotorama/fotorama.js",
 
                     // app
+                    "src/js/utils/carousel.js",
                     "src/js/app.js"
                 ],
                 dest: "dist/build.js",

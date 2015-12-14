@@ -1,0 +1,31 @@
+/* new-goods styles */
+.new-goods__item {
+  float: left;
+  width: 192px;
+  margin: 0 10px 0 0;
+}
+.new-goods__item img {
+  width: 100%;
+}
+.new-goods__title {
+  color: #212121;
+  font-size: 12px;
+  line-height: 1;
+  margin: 10px 0;
+  text-align: center;
+}
+.new-goods__price {
+  text-align: center;
+}
+.new-goods__price-new {
+  font-size: 14px;
+  font-weight: 400;
+  color: #009680;
+}
+.new-goods__price-old {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+  text-decoration: line-through;
+  padding: 0 0 0 5px;
+}

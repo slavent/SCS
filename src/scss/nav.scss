@@ -54,10 +54,13 @@
 		}
 
 		&-request-btn {
+			outline: none;
+			display: block;
+			text-decoration: none;
 			color: #212121;
 		    background: #D7EEEE;
 		    padding: 10px 20px;
-		    margin: 6px 0 0 80px;
+		    margin: 7px 0 0 80px;
 		    transition: all .3s;
 
 		    &:hover {

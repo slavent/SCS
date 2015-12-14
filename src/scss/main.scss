@@ -7,6 +7,8 @@ body, html {
 body {
 	overflow-x: hidden;
 	color: #212121;
+	font-family: RobotoRegular;
+	line-height: 1;
 }
 
 h2 {
@@ -75,10 +77,19 @@ h2 {
 	color: #999;
 	padding: 20px 0 0;
 
-	&__title {
-		color: #212121;
-		font-weight: bold;
+	&__item {
 		margin: 0 0 5px 0;
+	}
+
+	&__title {
+		color: #999;
+		font-size: 11px;
+	}
+
+	&__number {
+		color: #212121;
+	    font-weight: bold;
+	    font-size: 18px;
 	}
 }
 
@@ -86,4 +97,17 @@ h2 {
 	padding: 20px 0 0;
 	font-size: 14px;
 	color: #999;
+}
+
+.popup-container {
+	display: none;
+}
+
+#request-form {
+	position: relative;
+	background: #fff;
+	padding: 20px;
+	width: auto;
+	width: 1000px;
+	margin: 20px auto;
 }

@@ -1,21 +1,12 @@
 /* new-goods styles */
 
 .new-goods {
-	display: table;
 
 	&__item {
 		float: left;
-		width: 19.2%;
-		margin: 0 5px;
+		width: 192px;
+		margin: 0 10px 0 0;
 		
-		&-margin-right-none {
-			margin-right: 0;
-		}
-
-		&-margin-left-none {
-			margin-left: 0;
-		}
-
 		img {
 			width: 100%;
 		}

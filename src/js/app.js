@@ -4,8 +4,9 @@
 		$window = $( window ),
 		$header = $( "header" ),
 		$nav = $( "nav" ),
+		$requestBtn = $( ".js-request-btn" );
 
-		scrollTopPos = $header.outerHeight() + $nav.outerHeight();
+	scrollTopPos = $header.outerHeight() + $nav.outerHeight();
 
 	init();
 
@@ -15,28 +16,23 @@
 	}
 
 	function createCarousel() {
+		var
+			carouselNewGoods = Carousel( $( ".js-carousel-new-goods" ) ),
+			carouselClients = Carousel( $( ".js-carousel-clients" ) );
 
-	}
-
-	function fixedNav() {
-		console.log( "fix" );
-		$nav.addClass( "fixed" );
-	}
-
-	function unfixedNav() {
-		console.log( "unfix" );
-		$nav.removeClass( "fixed" );
+		carouselNewGoods.init();
+		carouselClients.init();
 	}
 
 	function bindEvents() {
 		$window.on( "scroll", function() {
-			console.log( $window.scrollTop(), scrollTopPos );
-			if ( $window.scrollTop() > scrollTopPos ) {
-				fixedNav();
-			} else {
-				unfixedNav();
-			}
-		} )
+			$window.scrollTop() > scrollTopPos ? $nav.addClass( "fixed" ) : $nav.removeClass( "fixed" );
+		} );
+
+		$requestBtn.magnificPopup( {
+			type: "inline",
+			mainClass: "mfp-fade"
+		} );
 	}
 
 }( this, jQuery ) );
