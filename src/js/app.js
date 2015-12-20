@@ -6,6 +6,8 @@
 		$nav = $( "nav" ),
 		$requestBtn = $( ".js-request-btn" ),
 		$rootColors = $( ".js-colors" ),
+		$rootIcheck = $( "input[type=checkbox]" ),
+		$rootSelectize = $( ".js-select" ),
 
 		scrollTopPos = $header.outerHeight() + $nav.outerHeight();
 
@@ -29,7 +31,7 @@
 	}
 
 	function createCustomCheckbox() {
-		$( "input[type=checkbox]" ).iCheck( {
+		$rootIcheck.iCheck( {
 			checkboxClass: "icheckbox_minimal-aero",
 			radioClass: "iradio_minimal-aero",
 			increaseArea: "20%"
@@ -37,7 +39,7 @@
 	}
 
 	function createCustomSelect() {
-
+		$rootSelectize.selectize();
 	}
 
 	function createColors() {

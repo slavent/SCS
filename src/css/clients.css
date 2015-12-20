@@ -1,0 +1,10 @@
+/* clients styles */
+.clients__item {
+  float: left;
+  width: 192px;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+}
+.clients img {
+  width: 100%;
+}

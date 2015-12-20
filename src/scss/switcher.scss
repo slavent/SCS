@@ -1,0 +1,19 @@
+/* switcher styles */
+
+.switcher {
+
+	&__item {
+		transition: all .3s;
+
+		&:hover {
+		
+		}
+	}
+
+	&__container {
+
+		&-item {
+			display: none;
+		}
+	}
+}

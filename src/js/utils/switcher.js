@@ -13,7 +13,8 @@ function Switcher( config ) {
 	init();
 
 	function init() {
-
+		renderSwitcher();
+		bindEvents();
 	}
 
 	function renderSwitcher() {
