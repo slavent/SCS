@@ -4,14 +4,18 @@
 		$window = $( window ),
 		$header = $( "header" ),
 		$nav = $( "nav" ),
-		$requestBtn = $( ".js-request-btn" );
+		$requestBtn = $( ".js-request-btn" ),
+		$rootColors = $( ".js-colors" ),
 
-	scrollTopPos = $header.outerHeight() + $nav.outerHeight();
+		scrollTopPos = $header.outerHeight() + $nav.outerHeight();
 
-	init();
+	initUI();
 
-	function init() {
+	function initUI() {
 		createCarousel();
+		createCustomCheckbox();
+		createCustomSelect();
+		createColors();
 		bindEvents();
 	}
 
@@ -22,6 +26,32 @@
 
 		carouselNewGoods.init();
 		carouselClients.init();
+	}
+
+	function createCustomCheckbox() {
+		$( "input[type=checkbox]" ).iCheck( {
+			checkboxClass: "icheckbox_minimal-aero",
+			radioClass: "iradio_minimal-aero",
+			increaseArea: "20%"
+		} );
+	}
+
+	function createCustomSelect() {
+
+	}
+
+	function createColors() {
+		$rootColors.children().each( function() {
+			var
+				color = $( this ).data( "color" ),
+				$colorItem = $( "<div style='background:" + color + "; width: 20px; height: 20px;'/>" )
+
+			$( this ).append( $colorItem );
+		} );
+	}
+
+	function sendOrder() {
+
 	}
 
 	function bindEvents() {

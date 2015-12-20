@@ -1,0 +1,151 @@
+/* Catalog styles */
+
+.catalog {
+
+	&__box {
+		margin: 0 0 20px 0;
+
+		&-title {
+			display: inline-block;
+			font-size: 14px;
+			padding: 0 0 2px;
+    		margin: 0 0 10px 0;
+			text-transform: uppercase;
+			font-family: RobotoBold;
+			text-transform: uppercase;
+			border-bottom: 2px solid #E0E0E0;
+		}
+	}
+
+	&__banner {
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__header {
+		margin: 20px 0 0;
+		padding: 10px 0;
+		border-top: 1px solid #E0E0E0;
+		border-bottom: 1px solid #E0E0E0;
+		font-size: 13px;
+	}
+
+	&__showed {
+		display: inline-block;
+		padding: 0 15px 0 0;
+		border-right: 1px solid #E0E0E0;
+
+		&-item {
+			display: inline-block;
+			line-height: 28px;
+			text-align: center;
+			margin: 0 5px 0 0;
+			width: 28px;
+			height: 28px;
+			border: 1px solid #E0E0E0;
+		}
+	}
+
+	&__sort {
+		display: inline-block;
+		padding: 0 0 0 15px;
+
+		&-title {
+			display: inline-block;
+			margin: 0 5px 0 0;
+		}
+	}
+
+	&__display {
+		display: inline-block;
+		float: right;
+		text-align: right;
+
+		&-title {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0 10px 0 0;
+		}
+
+		&-item {
+			display: table-cell;
+			vertical-align: middle;
+			
+			span {
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				border: 1px solid #E0E0E0;
+				margin: 0 0 0 7px;
+			}
+		}
+	}
+
+	&__params {
+
+	}
+
+	&__goods {
+		display: table;
+		margin: 28px 0 30px 0;
+
+		&-item {
+			float: left;
+			width: 211px;
+			margin: 0 10px 20px 0;
+			
+			img {
+				width: 100%;
+			}
+
+			&-margin-right-none {
+				margin-right: 0;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&-title {
+			color: #212121;
+			font-size: 13px;
+			line-height: 1;
+			margin: 10px 0;
+			text-align: center;
+		}
+	}
+
+	&__desc {
+		font-size: 13px;
+	}
+
+	&__params {
+
+		&-item {
+
+			label {
+				font-size: 13px;
+			}
+
+			&-color {
+				display: inline-block;
+				width: 34px;
+				height: 34px;
+				margin: 0 10px 0 0;
+				border: 1px solid #E0E0E0;
+				padding: 6px;
+				transition: all .3s;
+				box-sizing: border-box;
+				-ms-box-sizing: border-box;
+
+				&:hover {
+					border: 1px solid #009688;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
