@@ -74,6 +74,7 @@ module.exports = function( grunt ) {
 
                     // app
                     "src/js/utils/carousel.js",
+                    "src/js/utils/switcher.js",
                     "src/js/app.js"
                 ],
                 dest: "dist/build.js",
