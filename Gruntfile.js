@@ -3,69 +3,12 @@ module.exports = function( grunt ) {
     grunt.initConfig( {
         pkg: grunt.file.readJSON( "package.json" ),
 
-        compass: {
-            compile: {
-                options: {
-                    sassDir: "src/scss",
-                    cssDir: "src/css",
-                    noLineComments: true
-                }
-            }
-        },
-
-        autoprefixer: {
-            options: {
-                browsers: [ "last 8 versions", "ie 8", "ie 9" ]
-            },
-            dist: {
-                files: {
-                    "dist/build.min.css": "dist/build.min.css"
-                }
-            }
-        },
-
-        cssmin: {
-            options: {
-                shorthandCompacting: false,
-                roundingPrecision: -1
-            },
-            target: {
-                files: {
-                    "dist/build.min.css": [
-                        "node_modules/normalize.css/normalize.css",
-                        "node_modules/magnific-popup/dist/magnific-popup.css",
-                        "node_modules/fotorama/fotorama.css",
-                        "node_modules/icheck/skins/minimal/aero.css",
-                        "node_modules/selectize/dist/css/selectize.css",
-                        "src/css/*.css"
-                    ]
-                }
-            }
-        },
-
-        watch: {
-            css: {
-                files: [ "src/scss/*.scss" ],
-                tasks: [ "compass", "cssmin" ],
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            },
-            scripts: {
-                files: [ "src/js/*.js", "src/js/utils/*.js" ],
-                tasks: [ "concat" ],
-                options: {
-                    debounceDelay: 250
-                },
-            }
-        },
-
         concat: {
-            options: {
-                separator: ";\n",
+            css: {
+                src: [ "src/scss/*.scss" ],
+                dest: "dist/build.scss"
             },
-            dist: {
+            js: {
                 src: [
                     // libs
                     "node_modules/jquery/dist/jquery.min.js",
@@ -79,7 +22,46 @@ module.exports = function( grunt ) {
                     "src/js/utils/switcher.js",
                     "src/js/app.js"
                 ],
-                dest: "dist/build.js",
+                dest: "dist/build.js"
+            }
+        },
+
+        sass: {
+            dist: {
+                files: {
+                    "dist/build.css": "dist/build.scss"
+                }
+            }
+        },
+
+        autoprefixer: {
+            options: {
+                browsers: [ "last 8 versions", "ie 8", "ie 9" ]
+            },
+            dist: {
+                files: {
+                    "dist/build.css": "dist/build.css"
+                }
+            }
+        },
+
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1,
+                keepSpecialComments: 0
+            },
+            target: {
+                files: {
+                    "dist/build.min.css": [
+                        "node_modules/normalize.css/normalize.css",
+                        "node_modules/magnific-popup/dist/magnific-popup.css",
+                        "node_modules/fotorama/fotorama.css",
+                        "node_modules/icheck/skins/minimal/aero.css",
+                        "node_modules/selectize/dist/css/selectize.css",
+                        "dist/build.css"
+                    ]
+                }
             }
         },
 
@@ -92,13 +74,32 @@ module.exports = function( grunt ) {
         },
 
         clean: [
-            "dist/build.js",
-            "src/css"
-        ]
+            "dist/build.scss",
+            "dist/build.css",
+            "dist/build.js"
+        ],
+
+        watch: {
+            css: {
+                files: [ "src/scss/*.scss" ],
+                tasks: [ "concat:js", "sass" ],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            scripts: {
+                files: [ "src/js/*.js", "src/js/utils/*.js" ],
+                tasks: [ "concat" ],
+                options: {
+                    debounceDelay: 250
+                }
+            }
+        }
 
     } );
 
-    grunt.loadNpmTasks( "grunt-contrib-compass" );
+    grunt.loadNpmTasks( "grunt-sass" );
     grunt.loadNpmTasks( "grunt-contrib-watch" );
     grunt.loadNpmTasks( "grunt-contrib-concat" );
     grunt.loadNpmTasks( "grunt-contrib-uglify" );
@@ -107,6 +108,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( "grunt-contrib-clean" );
 
     grunt.registerTask( "default", [ "watch" ] );
-    grunt.registerTask( "prod", [ "compass", "cssmin", "autoprefixer", "concat", "uglify", "clean" ] );
+    grunt.registerTask( "prod", [ "concat:css", "sass", "autoprefixer", "cssmin", "concat:js", "uglify", "clean" ] );
 
 };

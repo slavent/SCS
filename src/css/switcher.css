@@ -1,7 +1,0 @@
-/* switcher styles */
-.switcher__item {
-  transition: all .3s;
-}
-.switcher__container-item {
-  display: none;
-}
