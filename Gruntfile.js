@@ -16,6 +16,7 @@ module.exports = function( grunt ) {
                     "node_modules/fotorama/fotorama.js",
                     "node_modules/icheck/icheck.min.js",
                     "node_modules/selectize/dist/js/standalone/selectize.min.js",
+                    "src/js/libs/zoomsl-3.0.min.js",
 
                     // app
                     "src/js/utils/carousel.js",
@@ -82,7 +83,7 @@ module.exports = function( grunt ) {
         watch: {
             css: {
                 files: [ "src/scss/*.scss" ],
-                tasks: [ "concat:js", "sass" ],
+                tasks: [ "concat:css", "sass", "cssmin" ],
                 options: {
                     spawn: false,
                     livereload: true
@@ -90,7 +91,7 @@ module.exports = function( grunt ) {
             },
             scripts: {
                 files: [ "src/js/*.js", "src/js/utils/*.js" ],
-                tasks: [ "concat" ],
+                tasks: [ "concat:js" ],
                 options: {
                     debounceDelay: 250
                 }
@@ -107,7 +108,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( "grunt-autoprefixer" );
     grunt.loadNpmTasks( "grunt-contrib-clean" );
 
-    grunt.registerTask( "default", [ "watch" ] );
+    grunt.registerTask( "default", [ "concat:css", "sass", "cssmin", "concat:js", "watch" ] );
     grunt.registerTask( "prod", [ "concat:css", "sass", "autoprefixer", "cssmin", "concat:js", "uglify", "clean" ] );
-
 };

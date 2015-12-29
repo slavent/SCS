@@ -8,6 +8,7 @@
 		$rootColors = $( ".js-colors" ),
 		$rootIcheck = $( "input[type=checkbox]" ),
 		$rootSelectize = $( ".js-select" ),
+		$rootZoom = $( ".js-zoom" ),
 
 		scrollTopPos = $header.outerHeight() + $nav.outerHeight();
 
@@ -15,9 +16,11 @@
 
 	function initUI() {
 		createCarousel();
+		createSwitcher();
 		createCustomCheckbox();
 		createCustomSelect();
 		createColors();
+		createZoom();
 		bindEvents();
 	}
 
@@ -28,6 +31,15 @@
 
 		carouselNewGoods.init();
 		carouselClients.init();
+	}
+
+	function createSwitcher() {
+		var
+			switcherConfig = {
+				$root: $( ".js-switcher" )
+			};
+
+		Switcher( switcherConfig );
 	}
 
 	function createCustomCheckbox() {
@@ -50,6 +62,10 @@
 
 			$( this ).append( $colorItem );
 		} );
+	}
+
+	function createZoom() {
+		$rootZoom ? $rootZoom.imagezoomsl() : null;
 	}
 
 	function sendOrder() {

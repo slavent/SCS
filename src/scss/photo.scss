@@ -1,0 +1,28 @@
+/* Photo styles */
+
+.photo {
+
+	&__preview {
+		width: 13%;
+		float: left;
+
+		&-item {
+			margin: 0 0 10px 0;
+			transition: all .3s;
+
+			&:hover {
+				cursor: pointer;
+				opacity: .9;
+			}
+		}
+	}
+
+	&__big {
+		float: right;
+		width: 87%;
+
+		&:hover {
+			cursor: crosshair;
+		}
+	}
+}
